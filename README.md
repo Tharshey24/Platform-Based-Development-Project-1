@@ -1,6 +1,5 @@
 # Platform-Based-Development-Project-1
-Repo For 1st PBDV Project
-Contributions:
+Group Members:
 - Tharshey Dean Naidoo (22029741)
 - Bronwyn Leah Naicker (22133316)
 - Eshkar Rajcoomar (22137553)
