@@ -13,7 +13,7 @@ db = pymysql.connect(
 )
 cursor = db.cursor()
 
-#Student Registration
+#Student & Staff Registration
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -30,7 +30,7 @@ def register():
         return redirect('/login')
     return render_template('register.html')
 
-#Student Login
+#Student & Staff Login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -48,14 +48,14 @@ def login():
             return redirect('/login')
     return render_template('login.html')
 
-# Logout a student
+# Logout a student or Staff
 @app.route('/logout')
 def logout():
     session.pop('student_id', None)
     session.pop('student_name', None)
     return redirect('/login')
 
-# Edit profile of a student
+# Edit profile of a student or Staff
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():
     if 'student_id' in session:
